@@ -13,9 +13,11 @@ def delay_sort(random_array: List[int]) -> List[int]:
             sorted_array.append(delay)
 
     threads = []
-    for random_num in random_array:
-        thread = threading.Thread(target=_push_after_delay, args=(random_num,))
+    for rand_num in random_array:
+        thread = threading.Thread(target=_push_after_delay, args=(rand_num,))
         threads.append(thread)
+
+    for thread in threads:
         thread.start()
 
     for thread in threads:
