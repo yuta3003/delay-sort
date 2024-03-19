@@ -7,14 +7,14 @@ def delay_sort(random_array: List[int]) -> List[int]:
     sorted_array = []
     array_lock = threading.Lock()
 
-    def _push_after_delay(delay: int):
+    def _append_after_delay(delay: int):
         time.sleep(delay / 100)
         with array_lock:
             sorted_array.append(delay)
 
     threads = []
     for rand_num in random_array:
-        thread = threading.Thread(target=_push_after_delay, args=(rand_num,))
+        thread = threading.Thread(target=_append_after_delay, args=(rand_num,))
         threads.append(thread)
 
     for thread in threads:
