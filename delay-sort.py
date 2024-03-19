@@ -1,12 +1,6 @@
-import random
 import threading
 import time
 from typing import List
-
-
-def create_random_array(array_length: int) -> List[int]:
-    rand_array = [random.randint(0, 30) for _ in range(array_length)]
-    return rand_array
 
 
 def delay_sort(random_array: List[int]) -> List[int]:
@@ -31,6 +25,11 @@ def delay_sort(random_array: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
+    import random
+
+    def create_random_array(array_length: int) -> List[int]:
+        rand_array = [random.randint(0, 30) for _ in range(array_length)]
+        return rand_array
 
     ARRAY_LENGTH = 10
     random_array = create_random_array(ARRAY_LENGTH)
