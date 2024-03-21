@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "delay-sort"
+version = "0.1.0"
+description = ""
+authors = ["yuta3003 <y.nakazawa3003+github@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
